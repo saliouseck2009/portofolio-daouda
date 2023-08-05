@@ -216,7 +216,7 @@ button {
 
 .layout_padding {
     padding-top: 90px;
-    padding-bottom: 0px;
+    padding-bottom: 50px;
 }
 
 .header_section {
@@ -418,7 +418,7 @@ button {
 }
 
 .about_taital {
-    width: 63%;
+    width: 90%;
     float: right;
     margin-top: 80px;
 }
