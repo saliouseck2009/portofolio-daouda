@@ -729,7 +729,7 @@ textarea#comment.massage-bt::placeholder {
 }
 
 .send_bt a {
-    width: 30%;
+    width: 75%;
     float: left;
     background-color: #041d2c;
     color: #fffdf6;
@@ -738,6 +738,7 @@ textarea#comment.massage-bt::placeholder {
     font-size: 18px;
     border-radius: 10px;
     margin-left: 10px;
+    margin-bottom: 16px;
 }
 
 .send_bt a {
