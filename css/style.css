@@ -959,3 +959,21 @@ a {
     text-decoration: none;
     outline: none !important;
 }
+
+/* Espace autour de chaque image */
+.gallery_section .gallery-carousel .item {
+  padding: 5px;
+}
+/* Taille uniforme et recadrage centré */
+.gallery_section .gallery-item {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform .3s;
+}
+/* Légère mise en avant au survol */
+.gallery_section .gallery-item.zoom:hover {
+  transform: scale(1.05);
+}

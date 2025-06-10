@@ -47,6 +47,7 @@
                         <li><a href="projects.html">PROJETS</a></li>
                         <li><a href="contact.html">CONTACTEZ NOUS</a></li>
                         <li><a href="clients.html">CLIENTS</a></li>
+                        <li><a href="#gallery">GALERIE</a></li>
                         <li><a href="#"><img src="images/search-icon.png"></a></li>
                         <div id="myNav" class="overlay">
                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -362,6 +363,17 @@
           </div>
          </div>
       <!-- project section end -->
+       <!-- section Galerie start -->
+        <div class="our_section layout_padding">
+      <div  id="gallery" class="container gallery_section layout_padding">
+         <h2 class="our_text"><strong>NOTRE GALERIE</strong></h2>
+         <div class="padding_top_0 owl-carousel gallery-carousel owl-theme">
+            <!-- les items seront générés en JS -->
+         </div>
+      </div>
+      </div>
+      <!-- section Galerie end -->
+
       <!-- client section start -->
       <div class="clients_section layout_padding">
          <div class="container">
@@ -530,5 +542,51 @@
          document.getElementById("myNav").style.width = "0%";
          }
       </script>
+      <script>
+      $(document).ready(function(){
+         var $carousel = $('.gallery-carousel');
+         // Génère automatiquement les items de 29 à 50
+         for (var i = 29; i <= 50; i++) {
+            var src = 'images/gallerie/jpeg_file/' + i + '.jpeg';
+            var $item = $('<div class="item">').append(
+            $('<a>', {
+               class: 'fancybox',
+               href: src,
+               'data-fancybox': 'gallery'
+            }).append(
+               $('<img>', {
+                  src: src,
+                  alt: 'Image ' + i,
+                  class: 'gallery-item zoom'
+               })
+            )
+            );
+            $carousel.append($item);
+         }
+         // Initialise Owl Carousel
+         $carousel.owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: false,
+            navText: [
+            '<span class="carousel-control-prev-icon"></span>',
+            '<span class="carousel-control-next-icon"></span>'
+            ],
+            responsive: {
+            0:   { items: 1 },
+            600: { items: 2 },
+            1000:{ items: 4 }
+            }
+         });
+         // Initialise Fancybox pour lightbox
+         $(".fancybox").fancybox({
+            openEffect: "none",
+            closeEffect: "none",
+            buttons: ["zoom","close"]
+         });
+      });
+      </script>
+
    </body>
 </html>
