@@ -45,6 +45,8 @@ body {
     overflow-x: hidden;
 }
 
+
+
 a {
     color: #1f1f1f;
     text-decoration: none !important;
@@ -960,46 +962,32 @@ a {
     outline: none !important;
 }
 
-/* 1) Conserve le carousel en position relative */
-.gallery_section .gallery-carousel {
-  position: relative;
+/* Espace autour de chaque image */
+.gallery_section .gallery-carousel .item {
+  padding: 5px;
+}
+/* Taille uniforme et recadrage centré */
+.gallery_section .gallery-item {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform .3s;
+}
+/* Légère mise en avant au survol */
+.gallery_section .gallery-item.zoom:hover {
+  transform: scale(1.05);
 }
 
-/* 2) On place les deux boutons au centre vertical, espacés à 20px des bords */
-.gallery_section .gallery-carousel .owl-nav {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  pointer-events: none;     /* le container ne capte pas les clics */
-  padding: 0 20px;          /* espace entre les flèches et le carousel */
+/* Couleur et soulignement de l’élément actif */
+.navbar-nav .nav-link.active {
+  color: #007bff !important;
+  font-weight: 600;
+  border-bottom: 2px solid #007bff;
 }
 
-/* 3) Style des boutons : rond, fond semi-opaque, centrés */
-.gallery_section .gallery-carousel .owl-nav button {
-  pointer-events: all;      /* active les clics sur les boutons */
-  background: rgba(255,255,255,0.8);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background .2s;
+/* Optionnel : l’effet au survol pour tous les liens */
+.navbar-nav .nav-link:hover {
+  color: #0056b3 !important;
 }
-
-/* 4) Effet au survol */
-.gallery_section .gallery-carousel .owl-nav button:hover {
-  background: rgba(255,255,255,1);
-}
-
-/* 5) Taille et couleur de l’icône */
-.gallery_section .gallery-carousel .owl-nav button .fa {
-  font-size: 1.2rem;
-  color: #333;
-}
-

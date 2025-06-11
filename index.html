@@ -30,47 +30,57 @@
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
-   <body>
+   <body data-spy="scroll" data-target="#mainNavbar" data-offset="70">
       <!-- section header start -->
-      <div class="header_section">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-3">
-                  <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-               </div>
-               <div class="col-md-9">
-                  <div class="menu_text">
-                     <ul>
-                        <li><a href="index.html">ACCUEIL</a></li>
-                        <li><a href="about.html">A PROPOS</a></li>
-                        <li><a href="services.html">SERVICES</a></li>
-                        <li><a href="projects.html">PROJETS</a></li>
-                        <li><a href="contact.html">CONTACTEZ NOUS</a></li>
-                        <li><a href="clients.html">CLIENTS</a></li>
-                        <li><a href="#gallery">GALERIE</a></li>
-                        <li><a href="#"><img src="images/search-icon.png"></a></li>
-                        <div id="myNav" class="overlay">
-                           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                           <div class="overlay-content">
-                              <a href="index.html">ACCUEIL</a>
-                              <a href="about.html">A PROPOS</a>
-                              <a href="services.html">SERVICES</a>
-                              <a href="projects.html">PROJETS </a>
-                              <a href="contact.html">CONTACTER NOUS</a>
-                              <a href="clients.html">CLIENTS</a>
-                           </div>
-                        </div>
-                        <span  style="font-size:33px;cursor:pointer; color: #ffffff;" onclick="openNav()"><img src="images/toggle.png" class="toggle_menu"></span>
-                  </div>
-                  </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
+       <!-- Header start -->
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <img src="images/logo.png" alt="Logo CEG" style="height:50px;">
+    </a>
+    <button class="navbar-toggler" type="button"
+            data-toggle="collapse" data-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">ACCUEIL</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">À PROPOS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">PROJETS</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#gallery">GALERIE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#clients">CLIENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">CONTACTEZ-NOUS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <img src="images/search-icon.png" alt="Recherche" style="height:24px;">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header end -->
       <!-- section header end -->
       <!-- banner section start -->
-      <div class="banner_section">
+      <div id="home" class="banner_section layout_padding">
          <div class="container-fluid">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                <div class="carousel-inner">
@@ -97,7 +107,7 @@
                         </div>
                      </div>
                   </div>
-                  <!-- <div class="carousel-item">
+                  <div class="carousel-item">
                      <div class="row">
                         <div class="col-sm-2">
                            <div class="round"><img src="images/round-icon.png"></div>
@@ -106,17 +116,19 @@
                            <p class="number_text">02</p>
                            <div class="round"><img src="images/round-icon.png"></div>
                         </div>
-                        <div class="col-sm-5">
-                           <div class="taital_main">
-                              <h2 class="construction_text">CONSTRUCTION</h2>
-                              <h1 class="building_text">BUILDING</h1>
-                              <p class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure </p>
-                              <div class="contact_bt"><a href="#">CONTACTER NOUS</a></div>
-                              <div class="get_bt"><a href="#">GET A QUOTE NOW</a></div>
-                           </div>
+                       <div class="col-sm-5">
+                        <div class="taital_main">
+                           <h2 class="construction_text">INSTALLATION SOLAIRE</h2>
+                           <h1 class="building_text">ÉNERGIE RENOUVELABLE</h1>
+                           <p class="lorem_text">
+                              Notre expertise en installation de panneaux solaires photovoltaïques vous permet de réduire votre facture énergétique tout en préservant l’environnement.  
+                              <br>Du dimensionnement à la pose, en passant par la mise en service et le suivi, nous garantissons une solution clé-en-main adaptée à vos besoins, avec des panneaux de dernière génération et un onduleur performant.
+                           </p>
+                           <div class="contact_bt"><a href="contact.html">EN SAVOIR PLUS</a></div>
+                        </div>
                         </div>
                         <div class="col-sm-5">
-                           <div><img src="images/banner-bg.png"></div>
+                           <div><img src="images/gallerie/jpeg_file/34.jpeg"></div>
                         </div>
                      </div>
                   </div>
@@ -130,19 +142,46 @@
                            <div class="round"><img src="images/round-icon.png"></div>
                         </div>
                         <div class="col-sm-5">
-                           <div class="taital_main">
-                              <h2 class="construction_text">CONSTRUCTION</h2>
-                              <h1 class="building_text">BUILDING</h1>
-                              <p class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure </p>
-                              <div class="contact_bt"><a href="#">CONTACTER NOUS</a></div>
-                              <div class="get_bt"><a href="#">GET A QUOTE NOW</a></div>
-                           </div>
+                        <div class="taital_main">
+                           <h2 class="construction_text">POSE DE FAUX PLAFONDS</h2>
+                           <h1 class="building_text">ESTHÉTIQUE & ACOUSTIQUE</h1>
+                           <p class="lorem_text">
+                              Spécialistes en aménagement intérieur, nous réalisons la pose de faux plafonds suspendus pour améliorer à la fois l’esthétique et l’isolation phonique de vos espaces.  
+                              <br>Choix varié de matériaux (plâtre, dalles minérales, lames métalliques…) et finitions sur mesure pour s’accorder à votre design, tout en intégrant éclairage et gaines techniques.
+                           </p>
+                           <div class="contact_bt"><a href="contact.html">DÉCOUVRIR NOS SOLUTIONS</a></div>
+                        </div>
                         </div>
                         <div class="col-sm-5">
-                           <div><img src="images/banner-bg.png"></div>
+                           <div><img src="images/gallerie/jpeg_file/32.jpeg"></div>
                         </div>
                      </div>
-                  </div> -->
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-sm-2">
+                           <div class="round"><img src="images/round-icon.png"></div>
+                           <p class="number_text">02</p>
+                           <div class="line"><img src="images/line.png"></div>
+                           <p class="number_text">02</p>
+                           <div class="round"><img src="images/round-icon.png"></div>
+                        </div>
+                        <div class="col-sm-5">
+                        <div class="taital_main">
+                           <h2 class="construction_text">INSTALLATION CLIMATISEURS</h2>
+                           <h1 class="building_text">CONFORT THERMIQUE</h1>
+                           <p class="lorem_text">
+                              Nous installons et assurons la maintenance de systèmes de climatisation adaptés aux besoins résidentiels et tertiaires.  
+                              <br>Split, multisplit ou VRV/VRF : dimensionnement optimisé, pose soignée et suivi après-vente réactif pour vous garantir un confort durable et une efficacité énergétique maximale.
+                           </p>
+                           <div class="contact_bt"><a href="contact.html">CONTACTEZ-NOUS</a></div>
+                        </div>
+                        </div>
+                        <div class="col-sm-5">
+                           <div><img src="images/gallerie/jpeg_file/30.jpeg"></div>
+                        </div>
+                     </div>
+                  </div>
                </div>
                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -157,7 +196,7 @@
       </div>
       <!-- banner section end -->
       <!-- about section start -->
-      <div class="about_section">
+      <div id="about" class="about_section">
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-6">
@@ -186,14 +225,14 @@
                   </div>
                </div>
                <div class="col-md-6  padding_0">
-                  <div class="about_img"><img src="images/about-bg.png"></div>
+                  <div class="about_img"><img src="images/about-bg.png" alt="potaux courant en maintenance"></div>
                </div>
             </div>
          </div>
       </div>
       <!-- about section end -->
       <!-- our service section start -->
-      <div class="our_section layout_padding">
+      <div id="services" class="our_section layout_padding">
          <div class="container">
             <h1 class="our_text"><strong>NOS SERVICES</strong></h1>
             <p class="client_long_text">Voici la liste des services proposés par CAYOR ELECTRICITE GENERALE</p>
@@ -238,7 +277,7 @@
       </div>
       <!-- our service section end -->
       <!-- project section start -->
-      <div class="project_section layout_padding">
+      <div id="projects" class="project_section layout_padding">
          <h1 class="our_text mb-3" style="color: #ffffff;"><strong>Projets réalisés</strong></h1>
          <!-- Gallery -->
          <div class="container">
@@ -364,8 +403,8 @@
          </div>
       <!-- project section end -->
        <!-- section Galerie start -->
-        <div class="our_section layout_padding">
-      <div  id="gallery" class="container gallery_section layout_padding">
+        <div id="gallery"  class="our_section layout_padding">
+         <div  class="container gallery_section layout_padding">
          <h2 class="our_text"><strong>NOTRE GALERIE</strong></h2>
          <div class="padding_top_0 owl-carousel gallery-carousel owl-theme">
             <!-- les items seront générés en JS -->
@@ -375,7 +414,7 @@
       <!-- section Galerie end -->
 
       <!-- client section start -->
-      <div class="clients_section layout_padding">
+      <div id="clients" class="clients_section layout_padding">
          <div class="container">
             <h1 class="client_text"><strong>Témoignages</strong></h1>
             <p class="client_long_text">Découvrez ce que nos clients satisfaits ont à dire sur nos services électriques et bien plus encore. Leurs expériences avec notre équipe dévouée d'ingénieurs, de techniciens, et de gestionnaires techniques reflètent notre engagement envers la qualité, la fiabilité et la satisfaction client. Laissez-vous inspirer par leurs témoignages et rejoignez-nous pour vivre vous aussi une expérience exceptionnelle avec CAYOR ELECTRICITE GENERALE. Votre satisfaction est notre plus grande réussite ! </p>
@@ -430,7 +469,7 @@
       </div>
       <!-- client section end -->
       <!-- contact section start -->
-      <div class="contact_section">
+      <div id="contact" class="contact_section">
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-6">
@@ -470,7 +509,7 @@
       </div>
       <!-- contact section end -->
       <!-- footer section start -->
-      <div class="footer_section layout_padding">
+      <div  class="footer_section layout_padding">
          <div class="container">
          </div>
          <div class="footer_section_2">
@@ -547,22 +586,24 @@
          var $carousel = $('.gallery-carousel');
          // Génère automatiquement les items de 29 à 50
          for (var i = 29; i <= 50; i++) {
-            var src = 'images/gallerie/jpeg_file/' + i + '.jpeg';
-            var $item = $('<div class="item">').append(
-            $('<a>', {
-               class: 'fancybox',
-               href: src,
-               'data-fancybox': 'gallery'
-            }).append(
-               $('<img>', {
-                  src: src,
-                  alt: 'Image ' + i,
-                  class: 'gallery-item zoom'
-               })
-            )
-            );
-            $carousel.append($item);
-         }
+  var src = 'images/gallerie/jpeg_file/' + i + '.jpeg';
+  var $thumb = $('<div class="gallery-thumb">').append(
+    $('<img>', {
+      src: src,
+      alt: 'Image ' + i,
+      class: 'gallery-item zoom'
+    })
+  );
+  var $item = $('<div class="item">').append(
+    $('<a>', {
+      class: 'fancybox',
+      href: src,
+      'data-fancybox': 'gallery'
+    }).append($thumb)
+  );
+  $carousel.append($item);
+}
+
          // Initialise Owl Carousel
         $carousel.owlCarousel({
   loop: true,
