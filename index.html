@@ -587,20 +587,12 @@
          // Génère automatiquement les items de 29 à 50
          for (var i = 29; i <= 50; i++) {
   var src = 'images/gallerie/jpeg_file/' + i + '.jpeg';
-  var $thumb = $('<div class="gallery-thumb">').append(
-    $('<img>', {
-      src: src,
-      alt: 'Image ' + i,
-      class: 'gallery-item zoom'
-    })
-  );
-  var $item = $('<div class="item">').append(
-    $('<a>', {
-      class: 'fancybox',
-      href: src,
-      'data-fancybox': 'gallery'
-    }).append($thumb)
-  );
+
+var $item = $('<div class="item">').append(
+  $('<div class="gallery-thumb">').append(
+    $('<img>', { src: src, alt: 'Image '+i, class: 'gallery-item zoom' })
+  )
+);
   $carousel.append($item);
 }
 
